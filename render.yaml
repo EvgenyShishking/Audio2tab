@@ -1,0 +1,19 @@
+# Render.com deployment configuration
+# Docs: https://render.com/docs/render-yaml
+
+services:
+  - type: web
+    name: tab-gener8or
+    env: docker
+    # "starter" plan has 512 MB RAM — enough for Basic Pitch + Streamlit
+    # Upgrade to "standard" (2 GB) for faster conversions
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: TF_CPP_MIN_LOG_LEVEL
+        value: "3"
+    # Keep the service alive (free tier sleeps after 15 min inactivity)
+    # healthCheckPath: /_stcore/health
+    autoDeploy: true

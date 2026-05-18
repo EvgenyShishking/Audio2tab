@@ -1,0 +1,25 @@
+# Web framework
+streamlit>=1.24.0,<2.0.0
+
+# Audio-to-MIDI (Spotify Basic Pitch AI)
+basic-pitch==0.4.0
+
+# MIDI-to-tablature
+tayuya==0.0.4
+
+# Audio processing
+numpy>=1.23,<2.0.0
+librosa>=0.10.0,<0.11.0
+soundfile>=0.12.0
+matplotlib>=3.7.0,<3.8.0
+
+# MIDI handling
+mido>=1.2.10,<2.0.0
+
+# ML runtime (lightweight TFLite instead of full TensorFlow)
+scikit-learn==1.4.2
+tflite-runtime==2.14.0
+
+# Build tools
+setuptools>=65.0.0
+wheel>=0.41.0
